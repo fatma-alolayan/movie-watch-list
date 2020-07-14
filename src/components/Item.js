@@ -7,9 +7,11 @@ import movieStore from "../store/movieStore";
 const Item = ({ movie }) => {
   return (
     <>
-      <p> {movie.name} </p>
-      <button>watched</button>
-      <button>Delete</button>
+      <li className="list-group-item">
+        <p> {movie.name} </p>
+        <button>watched</button>
+        <button>Delete</button>
+      </li>
     </>
   );
 };

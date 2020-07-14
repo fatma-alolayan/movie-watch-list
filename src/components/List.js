@@ -5,6 +5,8 @@ import movieStore from "../store/movieStore";
 // components
 import AddMovies from "./AddMovies";
 import Item from "./Item";
+//styles
+import { Container } from "../styles";
 
 const List = () => {
   const list = movieStore.movies.map((movie) => (
@@ -13,8 +15,12 @@ const List = () => {
 
   return (
     <>
-      <AddMovies />
-      <p>{list}</p>
+      <Container>
+        <AddMovies />
+        <ul className="list-group">
+          <p>{list}</p>
+        </ul>
+      </Container>
     </>
   );
 };
