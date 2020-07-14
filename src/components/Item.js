@@ -4,14 +4,17 @@ import { observer } from "mobx-react";
 //store
 import movieStore from "../store/movieStore";
 
+// component
+import DeleteMovie from "./DeleteMovie";
+import Switch from "./Switch";
+
 const Item = ({ movie }) => {
   return (
     <>
-      <li className="list-group-item">
-        <p> {movie.name} </p>
-        <button>watched</button>
-        <button>Delete</button>
-      </li>
+      <p> {movie.name} </p>
+
+      <Switch updatedMovie={movie} />
+      <DeleteMovie movieId={movie.id} />
     </>
   );
 };

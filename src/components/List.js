@@ -6,19 +6,22 @@ import movieStore from "../store/movieStore";
 import AddMovies from "./AddMovies";
 import Item from "./Item";
 //styles
-import { Container } from "../styles";
+import { Container, ListStyle } from "../styles";
 
 const List = () => {
-  const list = movieStore.movies.map((movie) => (
-    <Item movie={movie} key={movie.id} />
-  ));
+  const watchList = movieStore.movies.filter((movie) => !movie.watch);
+  const watched = movieStore.movies.filter((movie) => movie.watch);
+
+  const list = watchList.map((movie) => <Item movie={movie} key={movie.id} />);
+  const wList = watched.map((movie) => <Item movie={movie} key={movie.id} />);
 
   return (
     <>
       <Container>
         <AddMovies />
         <ul className="list-group">
-          <p>{list}</p>
+          <ListStyle>{list}</ListStyle>
+          <ListStyle>{wList}</ListStyle>
         </ul>
       </Container>
     </>
