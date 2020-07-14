@@ -17,3 +17,6 @@ export const ListStyle = styled.div`
   margin-top: 30px;
   border: 1px solid black;
 `;
+export const Title = styled.h1`
+  color: red;
+`;
