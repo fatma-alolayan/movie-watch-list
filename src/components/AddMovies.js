@@ -31,9 +31,13 @@ const AddMovies = () => {
   };
 
   return (
-    <form id="addForm" onSubmit={handelSubmit} style={{ width: "500px" }}>
+    <form
+      id="addForm"
+      onSubmit={handelSubmit}
+      style={{ width: "400px", margin: "20px" }}
+    >
       <div
-        class="input-group  input-group-sm mb-3"
+        className="input-group  input-group-sm mb-3"
         style={{ marginLeft: "5px", display: "block" }}
       >
         <div className="form-group row">
@@ -41,11 +45,10 @@ const AddMovies = () => {
             type="text"
             name="name"
             value={movie.name}
-            class="form-control"
+            className="form-control"
             placeholder="Movie name"
             onChange={handelChange}
             required
-            onSubmit="this.value =``"
           />
         </div>{" "}
         <p style={{ color: "red" }}>{msg}</p>
@@ -54,16 +57,15 @@ const AddMovies = () => {
             type="text"
             name="image"
             value={movie.image}
-            class="form-control"
+            className="form-control"
             placeholder="Movie image"
             onChange={handelChange}
             required
-            onSubmit="this.value =``"
           />
         </div>
         <div className="form-group">
           <button
-            class="input-group-text  "
+            className="input-group-text  "
             id="basic-addon2"
             type="submit"
             onSubmit={handelSubmit}

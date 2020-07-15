@@ -11,11 +11,12 @@ const Deletemovie = ({ movieId }) => {
   return (
     <button
       type="button"
-      class="btn btn-danger"
+      className="btn btn-danger "
       style={{
         width: "90px",
         height: "35px",
         margin: "3px",
+
         // position: "absolute",
         // marginRight: "0px",
       }}

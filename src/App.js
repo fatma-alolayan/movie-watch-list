@@ -1,11 +1,18 @@
 import React from "react";
-//store
-import movieStore from "./store/movieStore";
+
 //components
 import List from "./components/List";
 
+//styles
+import { Title } from "./styles";
+
 function App() {
-  return <List />;
+  return (
+    <>
+      <Title>My Movies </Title>
+      <List />
+    </>
+  );
 }
 
 export default App;

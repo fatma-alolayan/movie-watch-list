@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 90%;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -11,10 +11,13 @@ export const ListStyle = styled.div`
   margin-left: auto;
   margin-right: auto;
   display: flex;
+
   float: left;
 `;
 export const Title = styled.h1`
-  color: red;
+  color: green;
+  margin: 50px;
+  text-align: center;
 `;
 export const MovieListStyle = styled.div`
   width: 350px;
@@ -25,4 +28,9 @@ export const MovieListStyle = styled.div`
 `;
 export const Img = styled.img`
   width: 150px;
+`;
+export const Buttoncontainer = styled.div`
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
 `;

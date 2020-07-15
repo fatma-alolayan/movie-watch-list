@@ -10,7 +10,7 @@ const Switch = ({ updatedMovie }) => {
   return (
     <button
       type="button"
-      class="btn btn-success"
+      className="btn btn-success"
       style={{
         width: "90px",
         height: "35px",

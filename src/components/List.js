@@ -30,44 +30,42 @@ const List = () => {
   ));
 
   return (
-    <>
-      <Container>
-        <AddMovies />
+    <Container>
+      <AddMovies />
 
-        <ListStyle>
-          <h4 style={{ width: "400px", margin: "10px" }}>
-            Watchlist {watchList.length}
-          </h4>
-          <h4 style={{ width: "400px", margin: "10px" }}>
-            Watched {wList.length}
-          </h4>
-        </ListStyle>
+      <ListStyle>
+        <h4 style={{ width: "400px", margin: "10px" }}>
+          Watchlist {watchList.length}
+        </h4>
+        <h4 style={{ width: "400px", margin: "10px" }}>
+          Watched {wList.length}
+        </h4>
+      </ListStyle>
 
-        <ListStyle>
-          <ul class="list-group" style={{ width: "400px", margin: "10px" }}>
-            <li class="list-group-item">
-              <input
-                type="search"
-                placeholder="Search movie .."
-                onChange={(event) => setQueryList(event.target.value)}
-              ></input>
-            </li>
-            {list.length === 0 ? "Nothing found" : [list]}
-          </ul>
+      <ListStyle>
+        <ul className="list-group" style={{ width: "400px", margin: "10px" }}>
+          <li className="list-group-item">
+            <input
+              type="search"
+              placeholder="Search movie .."
+              onChange={(event) => setQueryList(event.target.value)}
+            ></input>
+          </li>
+          {list.length === 0 ? "Nothing found" : [list]}
+        </ul>
 
-          <ul class="list-group" style={{ width: "400px", margin: "10px" }}>
-            <li class="list-group-item">
-              <input
-                type="search"
-                placeholder="Search movie .."
-                onChange={(event) => setQueryWatched(event.target.value)}
-              ></input>
-            </li>
-            {wList.length === 0 ? "Nothing found" : [wList]}
-          </ul>
-        </ListStyle>
-      </Container>
-    </>
+        <ul className="list-group" style={{ width: "400px", margin: "10px" }}>
+          <li className="list-group-item">
+            <input
+              type="search"
+              placeholder="Search movie .."
+              onChange={(event) => setQueryWatched(event.target.value)}
+            ></input>
+          </li>
+          {wList.length === 0 ? "Nothing found" : [wList]}
+        </ul>
+      </ListStyle>
+    </Container>
   );
 };
 
