@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react";
 
 //store
@@ -8,14 +8,20 @@ import movieStore from "../store/movieStore";
 import DeleteMovie from "./DeleteMovie";
 import Switch from "./Switch";
 
-const Item = ({ movie }) => {
-  return (
-    <>
-      <p> {movie.name} </p>
+// Style
+import { Img } from "../styles";
 
+const Item = ({ movie }) => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <li class="list-group-item" style={{ display: "flex" }}>
+      <p onClick={() => setShow(!show)}> {movie.name} </p>
+      {show ? <Img src={movie.image} alt="movie image" /> : null}
+      {/*  */}
       <Switch updatedMovie={movie} />
-      <DeleteMovie movieId={movie.id} />
-    </>
+      <DeleteMovie movieId={movie.id} />{" "}
+    </li>
   );
 };
 

@@ -13,33 +13,53 @@ const AddMovies = () => {
   };
 
   const handelSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     movieStore.addMovie(movie);
+    document.forms["addForm"]["name"].value = "";
+    document.forms["addForm"]["image"].value = "";
   };
 
   return (
-    <div className="input-group mb-3">
-      <input
-        type="text"
-        className="form-control"
-        placeholder="Movie"
-        aria-label="Recipient's username"
-        aria-describedby="button-addon2"
-        name="name"
-        onChange={handelChange}
-        required
-      />
-      <div className="input-group-append">
-        <button
-          className="btn btn-outline-secondary"
-          type="button"
-          id="button-addon2"
-          onClick={handelSubmit}
-        >
-          Add
-        </button>
+    <form id="addForm" onSubmit={handelSubmit}>
+      <div
+        class="input-group  input-group-sm mb-3"
+        style={{ width: "300px", marginLeft: "5px" }}
+      >
+        <div className="form-group row">
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Movie name"
+            onChange={handelChange}
+            required
+            onSubmit="this.value =``"
+          />
+        </div>
+        <div className="form-group row">
+          <input
+            type="text"
+            name="image"
+            class="form-control"
+            placeholder="Movie image"
+            onChange={handelChange}
+            required
+            onSubmit="this.value =``"
+          />
+        </div>
+
+        <div className="form-group">
+          <button
+            class="input-group-text"
+            id="basic-addon2"
+            type="submit"
+            onSubmit={handelSubmit}
+          >
+            + Add
+          </button>
+        </div>
       </div>
-    </div>
+    </form>
   );
 };
 

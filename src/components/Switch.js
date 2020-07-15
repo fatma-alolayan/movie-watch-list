@@ -3,13 +3,25 @@ import { observer } from "mobx-react";
 
 // Stores
 import movieStore from "../store/movieStore";
-// style
-import { DeleteButtonStyled } from "../styles";
 
 const Switch = ({ updatedMovie }) => {
   const change = () => movieStore.change(updatedMovie);
 
-  return <DeleteButtonStyled onClick={change}> Watched</DeleteButtonStyled>;
+  return (
+    <button
+      type="button"
+      class="btn btn-success"
+      style={{
+        width: "90px",
+        height: "35px",
+        margin: "3px",
+        marginRight: "0px",
+      }}
+      onClick={change}
+    >
+      {updatedMovie.watch ? "Unwatch" : "Watched"}
+    </button>
+  );
 };
 
 export default observer(Switch);
