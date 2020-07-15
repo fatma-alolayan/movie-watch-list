@@ -34,16 +34,16 @@ const List = () => {
       <AddMovies />
 
       <ListStyle>
-        <h4 style={{ width: "400px", margin: "10px" }}>
+        <h4 style={{ width: "500px", margin: "10px" }}>
           Watchlist {watchList.length}
         </h4>
-        <h4 style={{ width: "400px", margin: "10px" }}>
+        <h4 style={{ width: "500px", margin: "10px" }}>
           Watched {wList.length}
         </h4>
       </ListStyle>
 
       <ListStyle>
-        <ul className="list-group" style={{ width: "400px", margin: "10px" }}>
+        <ul className="list-group" style={{ width: "500px", margin: "10px" }}>
           <li className="list-group-item">
             <input
               type="search"
@@ -54,7 +54,7 @@ const List = () => {
           {list.length === 0 ? "Nothing found" : [list]}
         </ul>
 
-        <ul className="list-group" style={{ width: "400px", margin: "10px" }}>
+        <ul className="list-group" style={{ width: "500px", margin: "10px" }}>
           <li className="list-group-item">
             <input
               type="search"

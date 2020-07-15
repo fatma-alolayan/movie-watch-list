@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 700px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -28,6 +28,7 @@ export const MovieListStyle = styled.div`
 `;
 export const Img = styled.img`
   width: 150px;
+  padding-left: 5px;
 `;
 export const Buttoncontainer = styled.div`
   position: absolute;

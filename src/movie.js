@@ -8,10 +8,10 @@ const movies = [
   },
   {
     id: 2,
-    name: "Moonrise Kingdom",
+    name: "Sonic",
     watch: false,
     image:
-      "https://m.media-amazon.com/images/M/MV5BMzllMWI1ZDQtMmFhNS00NzJkLThmMTMtNzFmMmMyYjU3ZGVjXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_UY1200_CR105,0,630,1200_AL_.jpg",
+      "https://upload.wikimedia.org/wikipedia/en/c/c1/Sonic_the_Hedgehog_poster.jpg",
   },
   {
     id: 3,
