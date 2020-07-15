@@ -5,7 +5,9 @@ import { observer } from "mobx-react";
 import movieStore from "../store/movieStore";
 
 const AddMovies = () => {
-  const [movie, setMovie] = useState({ name: "" });
+  const resetMovie = { name: "", image: "" };
+
+  const [movie, setMovie] = useState(resetMovie);
   const [msg, setMsg] = useState("");
 
   const handelChange = (event) => {
@@ -16,6 +18,7 @@ const AddMovies = () => {
 
   const handelSubmit = (event) => {
     event.preventDefault();
+
     const checkMovie = (movies) => {
       return movie.name === movies.name;
     };
@@ -23,8 +26,8 @@ const AddMovies = () => {
     const movieExists = movieStore.movies.some(checkMovie);
 
     !movieExists ? movieStore.addMovie(movie) : setMsg("movie is exists ");
-    document.forms["addForm"]["name"].value = "";
-    document.forms["addForm"]["image"].value = "";
+
+    setMovie(resetMovie);
   };
 
   return (
@@ -37,6 +40,7 @@ const AddMovies = () => {
           <input
             type="text"
             name="name"
+            value={movie.name}
             class="form-control"
             placeholder="Movie name"
             onChange={handelChange}
@@ -49,6 +53,7 @@ const AddMovies = () => {
           <input
             type="text"
             name="image"
+            value={movie.image}
             class="form-control"
             placeholder="Movie image"
             onChange={handelChange}

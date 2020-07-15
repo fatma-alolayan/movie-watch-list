@@ -15,7 +15,7 @@ const Switch = ({ updatedMovie }) => {
         width: "90px",
         height: "35px",
         margin: "3px",
-        marginRight: "0px",
+        // marginLeft: "100px",
       }}
       onClick={change}
     >

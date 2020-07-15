@@ -16,8 +16,8 @@ const Deletemovie = ({ movieId }) => {
         width: "90px",
         height: "35px",
         margin: "3px",
-        marginRight: "0px",
-        float: "right",
+        // position: "absolute",
+        // marginRight: "0px",
       }}
       onClick={handleDelete}
     >

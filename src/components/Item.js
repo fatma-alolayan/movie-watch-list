@@ -18,7 +18,6 @@ const Item = ({ movie }) => {
     <li class="list-group-item" style={{ display: "flex" }}>
       <p onClick={() => setShow(!show)}> {movie.name} </p>
       {show ? <Img src={movie.image} alt="movie image" /> : null}
-      {/*  */}
       <Switch updatedMovie={movie} />
       <DeleteMovie movieId={movie.id} />{" "}
     </li>

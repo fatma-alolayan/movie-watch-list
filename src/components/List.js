@@ -11,6 +11,7 @@ import { Container, ListStyle } from "../styles";
 const List = () => {
   const [queryList, setQueryList] = useState("");
   const [queryWatched, setQueryWatched] = useState("");
+
   const watchList = movieStore.movies.filter((movie) => !movie.watch);
   const watched = movieStore.movies.filter((movie) => movie.watch);
 
